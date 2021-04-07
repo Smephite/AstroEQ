@@ -55,7 +55,8 @@
             },
             "intelliSenseMode": "gcc-x64",
             "defines": [
-                "__ESP_SYSTEM_H__"
+                "__ESP_SYSTEM_H__",
+                "__ESP32__"
             ]
         }
     ],

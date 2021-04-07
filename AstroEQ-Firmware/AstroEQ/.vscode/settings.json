@@ -5,7 +5,19 @@
         "astroeq.h": "c",
         "eepromaddresses.h": "c",
         "pinmappings.h": "c",
-        "*.txt": "c"
+        "*.txt": "c",
+        "esp_flash_internal.h": "c",
+        "esp_flash_spi_init.h": "c",
+        "gpio.h": "c",
+        "unionhelpers.h": "c",
+        "inttypes.h": "c",
+        "*.inc": "c",
+        "seriallink.h": "c",
+        "uart.h": "c",
+        "freertos.h": "c",
+        "task.h": "c",
+        "cstddef": "c",
+        "eepromreader.h": "c"
     },
     "cmake.configureOnOpen": false
 }
