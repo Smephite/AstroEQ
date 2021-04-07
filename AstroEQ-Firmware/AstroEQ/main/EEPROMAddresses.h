@@ -2,9 +2,7 @@
 #ifndef __EEPROM_ADDRESSES_H__
 #define __EEPROM_ADDRESSES_H__
 
-#ifdef __ESP32__
-
-#else
+#ifndef __ESP32__
 #include "avr/io.h"
 #endif
 
@@ -38,7 +36,7 @@
 
 #define EEPROMEnd_Address   (EEPROMStart_Address + 100 + (6*AccelTableLength) - 1)
 
-#if (EEPROMEnd_Address > E2END)
+#if (EEPROMEnd_Address > E2END) && !defined(__ESP32__)
     #error "AccelTable too large for EEPROM"
 #endif
 

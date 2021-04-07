@@ -4,6 +4,7 @@
 
 #include "AstroEQ.h"
 
+void initEEPROM(void);
 byte EEPROM_readByte(unsigned int address);
 unsigned int EEPROM_readInt(unsigned int address);
 unsigned long EEPROM_readLong(unsigned int address);
