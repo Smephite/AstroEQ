@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "esp_system.h": "c",
+        "astroeq.h": "c",
+        "eepromaddresses.h": "c",
+        "pinmappings.h": "c",
+        "*.txt": "c"
+    },
+    "cmake.configureOnOpen": false
+}

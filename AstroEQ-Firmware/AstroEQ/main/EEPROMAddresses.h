@@ -2,7 +2,11 @@
 #ifndef __EEPROM_ADDRESSES_H__
 #define __EEPROM_ADDRESSES_H__
 
+#ifdef __ESP32__
+
+#else
 #include "avr/io.h"
+#endif
 
 #define EEPROMStart_Address (                      0 )
 #define AstroEQID_Address   (EEPROMStart_Address + 0 )

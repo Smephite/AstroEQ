@@ -229,7 +229,57 @@
 //
 //----- End Pin Definitions for ATMegaXXX0 Variants -----
 //
+#elif defined(__ESP32__)
+//
+//---- User Configurable Pin Definitions -----
+//
 
+//GPIO Pins:
+                             //VCC (Header Pin 5)
+#define gpioPin_0_Define 21  //IO0 (Header Pin 4) - GPIO Pin
+#define gpioPin_1_Define 22  //IO1 (Header Pin 3) - GPIO Pin
+#define gpioPin_2_Define 23  //IO2 (Header Pin 2) - GPIO Pin
+                             //GND (Header Pin 1)
+
+//PWM Pin:
+#define pwmPin_Define 10
+
+//Status Pin:
+#define statusPin_Define 13
+
+//E-Stop Pin:
+#define estopPin_Define 11
+
+//Motor Driver Pins:
+#define resetPin_0_Define 55 //Analog 1
+#define resetPin_1_Define 54 //Analog 0
+
+#define dirPin_0_Define 3
+#define dirPin_1_Define 7
+
+#define enablePin_0_Define 4
+#define enablePin_1_Define 8
+
+#define stepPin_0_Define 5
+#define stepPin_1_Define 12
+
+#define modePins0_0_Define 15
+#define modePins1_0_Define 16
+#define modePins2_0_Define 17
+#define modePins0_1_Define 20
+#define modePins1_1_Define 19
+#define modePins2_1_Define 18
+
+//ST4 Pins:
+#define ST4AddPin_0_Define 50
+#define ST4AddPin_1_Define 51
+#define ST4SubPin_0_Define 53
+#define ST4SubPin_1_Define 52
+
+
+//
+//----- End User Configurable Pin Assignments -----
+//
 
 #endif
 

@@ -12,8 +12,13 @@
   Current Version: <see AstroEQ.h header>
 */
 
+//#ifdef CONFIG_IDF_TARGET
+#define __ESP32__ true
+//#endif
+
+
 //Only works with ATmega162, and Arduino Mega boards (1280 and 2560)
-#if defined(__AVR_ATmega162__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+#if defined(__AVR_ATmega162__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__ESP32__)
 
 /*
  * Include headers
@@ -25,11 +30,14 @@
 #include "SerialLink.h" //Serial Port
 #include "UnionHelpers.h" //Union prototypes
 #include "synta.h" //Synta Communications Protocol.
+#ifdef __ESP32__
+
+#else
 #include <util/delay.h>    
 #include <util/delay_basic.h>
 #include <util/crc16.h>
 #include <avr/wdt.h>
-
+#endif
 
 // Watchdog disable on boot.
 void wdt_init(void) __attribute__((naked)) __attribute__((section(".init3")));

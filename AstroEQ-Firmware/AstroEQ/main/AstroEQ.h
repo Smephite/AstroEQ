@@ -13,7 +13,7 @@
 */
 
 //Only works with ATmega162, and Arduino Mega boards (1280 and 2560)
-#if defined(__AVR_ATmega162__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+#if defined(__AVR_ATmega162__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__ESP32__)
 
 #ifndef __ASTROEQ_H__
 #define __ASTROEQ_H__
@@ -38,9 +38,12 @@ extern "C"{
 #include <stdlib.h>
 #include <math.h>
 
+#if defined(__ESP32__)
+#else
 #include <avr/pgmspace.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#endif
 
 #include <inttypes.h>
 
@@ -58,7 +61,7 @@ inline unsigned long astroEQ_vernum () {
     //to convert to an integer version number representation. The result is then
     //returned. The whole operation will be optimised to a constant.
     return (unsigned long)(100.0 *
-    #include "../VerNum.txt"
+    #include "../../VerNum.txt"
     );
 }
 
@@ -67,7 +70,7 @@ inline const char* astroEQ_verstr() {
     //a stringified version of the VerNum.txt file produced by the prebuild event.
     //The whole operation will be optimised to a constant.
     return 
-    #include "../VerNumStr.txt"
+    #include "../../VerNumStr.txt"
     ;
 }
 
