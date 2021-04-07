@@ -17,7 +17,10 @@
         "freertos.h": "c",
         "task.h": "c",
         "cstddef": "c",
-        "eepromreader.h": "c"
+        "eepromreader.h": "c",
+        "nvs.h": "c",
+        "stddef.h": "c",
+        "reent.h": "c"
     },
     "cmake.configureOnOpen": false
 }
